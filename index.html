@@ -24,6 +24,10 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <link
+rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
 </head>
 
 <body>
@@ -842,74 +846,96 @@ footer{
 
 /* ================= RESPONSIVE ================= */
 
-@media(max-width:992px){
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px) {
 
     nav{
-
+        padding:15px 5%;
         flex-direction:column;
+        gap:15px;
+    }
 
-        gap:20px;
-
+    .logo{
+        font-size:22px;
     }
 
     nav ul{
-
         flex-wrap:wrap;
-
         justify-content:center;
+        gap:18px;
+    }
 
+    nav ul li a{
+        font-size:15px;
     }
 
     .hero{
-
         flex-direction:column-reverse;
-
         text-align:center;
+        padding:160px 5% 80px;
+        gap:40px;
+    }
 
-        padding-top:180px;
-
+    .hero-text{
+        max-width:100%;
     }
 
     .hero h1{
-
+        font-size:42px;
         white-space:normal;
+    }
 
-        font-size:44px;
-
+    .hero h2{
+        font-size:24px;
     }
 
     .description{
-
-        margin:auto;
-
+        max-width:100%;
+        font-size:16px;
     }
 
     .buttons{
-
         justify-content:center;
-
+        flex-wrap:wrap;
     }
 
     .social{
+        justify-content:center;
+    }
 
-        text-align:center;
+    .hero-image{
+        justify-content:center;
+    }
 
+    .image-circle{
+        width:280px;
+        height:280px;
+    }
+
+    .about-card{
+        width:100%;
+        padding:35px;
+    }
+
+    .education-container{
+        width:100%;
+    }
+
+    .project-card{
+        width:100%;
     }
 
     .contact-container{
-
         flex-direction:column;
-
     }
 
-    .timeline{
-
-        padding-left:20px;
-
+    .contact-form,
+    .contact-info{
+        width:100%;
     }
 
 }
-
 
 
     </style>
@@ -947,7 +973,7 @@ footer{
     <section class="hero" id="home">
 
     <!-- LEFT SIDE -->
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-right">
 
         <p class="small-text">Hi, I'm</p>
 
@@ -999,7 +1025,7 @@ footer{
     </div>
 
     <!-- RIGHT SIDE -->
-    <div class="hero-image">
+    <div class="hero-image" data-aos="fade-left">
 
         <div class="image-circle">
 
@@ -1408,6 +1434,15 @@ and contribute to meaningful software projects.
     <i class="fas fa-arrow-up"></i>
 
 </button>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+    duration:1000,
+    once:true,
+    offset:120
+});
+</script>
 
 </body>
 
